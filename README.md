@@ -88,32 +88,24 @@ sudo apt-get install tesseract-ocr-chi-sim  # 安装中文支持
 
 ### 步骤3：安装Sensitive Info Scanner
 
-#### 方法1：使用pip安装
 ```bash
-pip install sensitive-info-scanner
-```
+克隆项目
+git clone https://github.com/ccjmqdzj/sensitive_info_scanner.git
+安装依赖
 
-#### 方法2：从源代码安装
-```bash
-# 克隆仓库
-git clone https://github.com/yourusername/sensitive_info_scanner.git
-cd sensitive_info_scanner
-
-# 安装依赖
 pip install -r requirements.txt
 ```
-
+or 
+```bash
+pip install opencv-python pytesseract pillow numpy
+```
 ## 使用方法
 
 ### 图形界面版本
 
 1. 启动程序：
    ```bash
-   python -m sensitive_info_scanner
-   ```
-   或者如果您使用pip安装：
-   ```bash
-   sensitive-info-scanner
+   python main.py
    ```
 
 2. 在程序界面中：
@@ -129,12 +121,12 @@ pip install -r requirements.txt
 
 基本用法：
 ```bash
-sensitive-info-scanner -f <图像文件路径> -t <敏感信息类型> -o <输出文件路径>
+python cli_main.py -f <图像文件路径> -t <敏感信息类型> -o <输出文件路径>
 ```
 
 或者：
 ```bash
-sensitive-info-scanner -d <图像文件夹路径> -t <敏感信息类型> -o <输出文件路径>
+python cli_main.py -d <图像文件夹路径> -t <敏感信息类型> -o <输出文件路径>
 ```
 
 参数说明：
@@ -156,13 +148,13 @@ sensitive-info-scanner -d <图像文件夹路径> -t <敏感信息类型> -o <�
 示例：
 ```bash
 # 扫描单个文件，检测所有类型的敏感信息
-sensitive-info-scanner -f image.jpg
+python cli_main.py -f image.jpg
 
 # 扫描文件夹中的所有图像，仅检测手机号和身份证号
-sensitive-info-scanner -d images_folder -t phone id_card
+python cli_main.py -d images_folder -t phone id_card
 
 # 扫描文件，将结果保存到文件
-sensitive-info-scanner -f image.jpg -o results.txt -v
+python cli_main.py -f image.jpg -o results.txt -v
 ```
 
 ## 技术实现
@@ -205,13 +197,6 @@ Sensitive Info Scanner 采用模块化设计，主要包含以下三个核心模
 - 改进文档和示例
 - 添加新的敏感信息类型支持
 
-如果您想贡献代码，请遵循以下步骤：
-
-1. Fork 本仓库
-2. 创建您的特性分支 (`git checkout -b feature/amazing-feature`)
-3. 提交您的更改 (`git commit -m 'Add some amazing feature'`)
-4. 推送到分支 (`git push origin feature/amazing-feature`)
-5. 打开一个 Pull Request
 
 ## 常见问题
 
@@ -233,15 +218,11 @@ A: 可以尝试：
    - 调整图像对比度和亮度
    - 在敏感信息检测模块中调整置信度阈值
 
-## 许可证
-
-本项目采用 MIT 许可证 - 详情请参阅 [LICENSE](LICENSE) 文件。
-
 ## 联系方式
 
-- 项目维护者：Your Name
-- 电子邮箱：your.email@example.com
-- GitHub：https://github.com/yourusername/sensitive_info_scanner
+- 项目维护者：ccjm
+- 电子邮箱：tan20101223all1@gmail.com
+- GitHub：https://github.com/ccjmqdzj/sensitive_info_scanner
 
 ---
 

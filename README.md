@@ -1,7 +1,7 @@
 # Sensitive Info Scanner
 
 <p align="center">
-  <img src="https://github.com/yourusername/sensitive_info_scanner/raw/main/docs/logo.png" alt="Sensitive Info Scanner Logo" width="200"/>
+  <img src="[https://github.com/yourusername/sensitive_info_scanner/raw/main/docs/logo.png](https://github.com/ccjmqdzj/sensitive_info_scanner/blob/main/image.png)" alt="Sensitive Info Scanner Logo" width="200"/>
 </p>
 
 <p align="center">
